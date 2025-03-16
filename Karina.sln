@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karina", "Karina\Karina.csproj", "{8B73BE70-D74F-4E24-A814-D58949FD6600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAccessLayer", "DatabaseAccessLayer\DatabaseAccessLayer.csproj", "{506AFBAA-E9AD-4205-9B81-61DF161D5E3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B73BE70-D74F-4E24-A814-D58949FD6600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B73BE70-D74F-4E24-A814-D58949FD6600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B73BE70-D74F-4E24-A814-D58949FD6600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B73BE70-D74F-4E24-A814-D58949FD6600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506AFBAA-E9AD-4205-9B81-61DF161D5E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506AFBAA-E9AD-4205-9B81-61DF161D5E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506AFBAA-E9AD-4205-9B81-61DF161D5E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506AFBAA-E9AD-4205-9B81-61DF161D5E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

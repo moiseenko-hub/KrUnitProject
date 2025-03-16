@@ -1,0 +1,114 @@
+﻿@model CalculatorViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+@section Styles
+{
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/index.js"></script>
+}
+<div class="main-content">
+    <div class="calculator-container">
+        <h2>Калькулятор</h2>
+        <form id="calculator-form" method="post">
+            <div class="input-group">
+                <label for="name">Название кампании</label>
+                @Html.TextBoxFor(x => x.CampaignName, new {placeholder = "0", type = "number", id = "name", name = "name", required = true})
+            </div>
+            <div class="input-group">
+                <label for="views">Количество показов:</label>
+                @Html.TextBoxFor(x => x.Views, new { placeholder = "0", type = "number", id = "views", name = "views", required = true })
+            </div>
+            <div class="input-group">
+                <label for="clicks">Количество кликов:</label>
+                @Html.TextBoxFor(x => x.Clicks, new { placeholder = "0", type = "number", id = "clicks", name = "clicks", required = true })
+            </div>
+            <div class="input-group">
+                <label for="ad-cost">Затраты на рекламу:</label>
+                @Html.TextBoxFor(x => x.AdCost, new { placeholder = "0", type = "number", id = "ad-cost", name = "ad-cost", required = true })
+            </div>
+            <div class="input-group">
+                <label for="installs">Количество установок приложения:</label>
+                @Html.TextBoxFor(x => x.Installs, new { placeholder = "0", type = "number", id = "installs", name = "installs", required = true })
+            </div>
+            <div class="input-group">
+                <label for="buyers">Количество покупателей в приложении:</label>
+                @Html.TextBoxFor(x => x.Buyers, new { placeholder = "0", type = "number", id = "buyers", name = "buyers", required = true })
+            </div>
+            <div class="input-group">
+                <label for="ad-revenue">Доход с рекламы:</label>
+                @Html.TextBoxFor(x => x.AdRevenue, new { placeholder = "0", type = "number", id = "ad-revenue", name = "ad-revenue", required = true })
+            </div>
+            <div class="input-group">
+                <label for="avg-use-time">Средняя продолжительность использования приложения:</label>
+                @Html.TextBoxFor(x => x.AvgUseTime, new { placeholder = "0", type = "number", id = "avg-use-time", name = "avg-use-time", required = true })
+            </div>
+            <button type="submit" id="submit">Рассчитать</button>
+        </form>
+    </div>
+    
+        <div class="results-container template">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-title">Стоимость клика</div>
+                        <div class="metric-value" id="cpc-value">0 ₽</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-title">CTR</div>
+                        <div class="metric-value" id="ctr-value">0 %</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-title">Конверсия в установки</div>
+                        <div class="metric-value" id="cr-value">0 %</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-title">Стоимость установки</div>
+                        <div class="metric-value" id="cpi-value">0 ₽</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-title">Стоимость привлечения клиента</div>
+                        <div class="metric-value" id="cac-value">0 ₽</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-title">ROI рекламы</div>
+                        <div class="metric-value" id="romi-value">0 %</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-title">Средний доход с пользователя</div>
+                        <div class="metric-value" id="arppu-value">0 ₽</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-title">Средний LTV</div>
+                        <div class="metric-value" id="ltv-value">0 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+
+</div>
