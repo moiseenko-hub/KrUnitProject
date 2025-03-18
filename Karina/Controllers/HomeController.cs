@@ -24,6 +24,11 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Forecast()
+    {
+        return View();
+    }
+
 
     [HttpGet]
     public IActionResult Metrics()

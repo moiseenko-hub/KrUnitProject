@@ -24,14 +24,14 @@ $(document).ready(function (){
         if (views && clicks && adCost && installs && buyers && adRevenue && avgUseTime){
             alert("Данные успешно сохранены!")
             $.post("/api/HomeApi/Calculate", req).then(function(result) {
-                $("#cpc-value").text(`${result.costPerClick} ₽`);
+                $("#cpc-value").text(`${result.costPerClick} BYN`);
                 $("#ctr-value").text(`${result.clickThroughRate}%`);
                 $("#cr-value").text(`${result.conversionRate}%`);
-                $("#cpi-value").text(`${result.costPerInstall} ₽`);
-                $("#cac-value").text(`${result.customerAcquisitionCost} ₽`);
+                $("#cpi-value").text(`${result.costPerInstall} BYN`);
+                $("#cac-value").text(`${result.customerAcquisitionCost} BYN`);
                 $("#romi-value").text(`${result.returnOnMarketingInvestment}%`);
-                $("#arppu-value").text(`${result.averageRevenuePerPayingUser} ₽`);
-                $("#ltv-value").text(`${result.lifetimeValue} ₽`);
+                $("#arppu-value").text(`${result.averageRevenuePerPayingUser} BYN`);
+                $("#ltv-value").text(`${result.lifetimeValue} BYN`);
             });
 
         }else{
