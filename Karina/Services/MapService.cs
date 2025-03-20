@@ -11,7 +11,11 @@ public class MapService
         {
             CostPerClick = Math.Round(viewModel.AdCost / viewModel.Clicks, 2, MidpointRounding.AwayFromZero),
             AverageRevenuePerPayingUser = Math.Round(viewModel.AdRevenue / viewModel.Buyers, 2, MidpointRounding.AwayFromZero),
-            ClickThroughRate = (float)Math.Round((double)(viewModel.Clicks / viewModel.Views * 100), 2, MidpointRounding.AwayFromZero),
+            ClickThroughRate = (float)Math.Round(
+                (viewModel.Clicks * 100.0) / viewModel.Views, 
+                2, 
+                MidpointRounding.AwayFromZero
+            ),
             ConversionRate = (float)Math.Round((double)(viewModel.Installs / viewModel.Clicks * 100), 2, MidpointRounding.AwayFromZero),
             CostPerInstall = Math.Round(viewModel.AdCost / viewModel.Installs, 2, MidpointRounding.AwayFromZero),
             CustomerAcquisitionCost = Math.Round(viewModel.AdCost / viewModel.Buyers, 2, MidpointRounding.AwayFromZero),
